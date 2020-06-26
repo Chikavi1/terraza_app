@@ -1,0 +1,27 @@
+#map-template{
+
+		height: 30em;
+		width: 100%;
+		
+		}
+	.footer {
+	  position: fixed;
+	  left: 0;
+	  bottom: 0;
+	  width: 100%;
+	  color: #17202F;
+	  text-align: center;
+	  background: white;
+	}
+	.padding{
+		padding: 1em;
+	}
+	.btn-block{
+		width: 100%;
+	}
+	.capitalize{
+		 text-transform: capitalize;
+	}
+	.margin-bottom{
+		margin-bottom: 1em;
+	}
