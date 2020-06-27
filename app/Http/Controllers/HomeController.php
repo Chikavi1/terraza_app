@@ -41,7 +41,7 @@ class HomeController extends Controller
         $maximum = $request->get('maximo');
         $services = $request->get('servicios');
 
-        $terraices = Bussiness::orderBy('price','asc')
+        $terraices = bussiness::orderBy('price','asc')
         ->place($place)
         ->minimum($minimum)
         ->maximum($maximum)

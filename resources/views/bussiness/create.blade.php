@@ -185,8 +185,8 @@
                   </div>
                   <div>
 
-                    <input type="text" placeholder="longitude (se borrara ya cuando tenga cuenta de google)" name="longitude" id="user_longitude" >
                     <input type="text" placeholder="latitude (se borrara ya cuando tenga cuenta de google)" name="latitude"  id="user_latitude"  >
+                    <input type="text" placeholder="longitude (se borrara ya cuando tenga cuenta de google)" name="longitude" id="user_longitude" >
                     <input type="text" placeholder="city (se borrara ya cuando tenga cuenta de google)" name="city"  id="city"  >
                   </div>
   <div class="card" style="padding: 3em;">
