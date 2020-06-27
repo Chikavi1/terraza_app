@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Bussiness;
+use App\bussiness;
 use Carbon\Carbon;
 use App\User;
 class HomeController extends Controller
