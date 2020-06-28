@@ -18,12 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/v1/getBussinesses','Apicontroller@index');
-Route::get('/v1/getBussiness/{id}','Apicontroller@show');
-Route::get('/v1/validateReserve','Apicontroller@checkDay');
-Route::get('/v1/search','Apicontroller@search');
-Route::get('/v1/getReserves/{id}','Apicontroller@getReserves');
-Route::get('/v1/createReservation','Apicontroller@createReservation');
+Route::get('/v1/getBussinesses','ApiController@index');
+Route::get('/v1/getBussiness/{id}','ApiController@show');
+Route::get('/v1/validateReserve','ApiController@checkDay');
+Route::get('/v1/search','ApiController@search');
+Route::get('/v1/getReserves/{id}','ApiController@getReserves');
+Route::get('/v1/createReservation','ApiController@createReservation');
 
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'AuthController@login');
