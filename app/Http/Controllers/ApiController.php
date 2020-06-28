@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\bussiness;
 
-use App\Reservation;
+use App\reservation;
 use DB;
 class ApiController extends Controller
 {
@@ -16,7 +16,7 @@ class ApiController extends Controller
      */
     public function index()
     {
-        $bussiness = Bussiness::all();
+        $bussiness = bussiness::all();
       return response()->json([
                     'data' => $bussiness
                 ]);
@@ -51,7 +51,7 @@ class ApiController extends Controller
      */
      public function show($id)
     {   
-       $bussiness = Bussiness::find($id);
+       $bussiness = bussiness::find($id);
        $reviews = $bussiness->reviews->map(function ($user) {
             return collect($user->toArray())
                 ->only(['created_at', 'description'])
