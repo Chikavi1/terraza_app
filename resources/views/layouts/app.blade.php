@@ -69,9 +69,9 @@
 
 
 <body>      
-  <div id="app">
-      <nav>
-        <div class="nav-wrapper">
+  <div id="app"  >
+      <nav style="@if(request()->get('app')) display: none !important; @endif">
+        <div class="nav-wrapper" >
           <a href="/" class="brand-logo center color-principal bold">Terrazas</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger color-principal "><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
