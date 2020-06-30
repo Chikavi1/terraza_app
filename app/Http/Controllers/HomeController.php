@@ -55,4 +55,16 @@ class HomeController extends Controller
         $negocios = $user->bussinesses;
         return view('profile')->with(compact('user','negocios'));
     }
+
+    public function terminos(){
+        return view('terminos');
+    }
+
+    public function privacidad(){
+        return view('privacidad');
+    }
+
+    public function ayuda(){    
+        return view('ayuda');
+    }
 }

@@ -35,3 +35,6 @@ Route::post('storeImage','BussinessController@storeImages')->name('saveImages');
 
 Route::post('checking','BussinessController@checking')->name('checking');
 
+Route::get('terminos','HomeController@terminos')->name('terminos');
+Route::get('privacidad','HomeController@privacidad')->name('privacidad');
+Route::get('ayuda','HomeController@ayuda')->name('ayuda');
