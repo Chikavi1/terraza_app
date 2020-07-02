@@ -145,8 +145,19 @@ class ApiController extends Controller
     {
         //
     }
+    public function search(Request $request){
 
-     public function search(Request $request){
+        $place = $request->get('q');
+        $terraices = bussiness::orderBy('price','asc')
+        ->place($place)->paginate(15);
+
+      return response()->json([
+                    'data' => $terraices
+                ]);
+
+    }
+
+     public function searchByLatLng(Request $request){
         $lat = $request->get("latitud");
         $lng = $request->get("longitud");
         $distance = 5;
