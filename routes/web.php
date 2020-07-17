@@ -34,6 +34,15 @@ Route::post('addImages','BussinessController@addImages')->name('addImages');
 Route::post('storeImage','BussinessController@storeImages')->name('saveImages');
 
 Route::post('checking','BussinessController@checking')->name('checking');
+Route::get('pagos','PaymentController@pagos')->name('pagos');
+
+
+
+Route::post('pay','PaymentController@pay')->name('pay');
+Route::get('/payments/approval','PaymentController@approval')->name('approval');
+Route::get('/payments/cancelled','PaymentController@cancelled')->name('cancelled');
+
+
 
 Route::get('terminos','HomeController@terminos')->name('terminos');
 Route::get('privacidad','HomeController@privacidad')->name('privacidad');

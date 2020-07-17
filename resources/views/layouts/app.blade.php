@@ -17,13 +17,8 @@
         <link rel="stylesheet" href="{{asset('css/main.css') }}" >
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
         <script src="{{ asset('js/lazysizes.min.js') }}" async ></script>
-        <script>
-            $(document).ready(function(){
-            $('.dropdown-trigger').dropdown();
-            $('.sidenav').sidenav();
-            $('.parallax').parallax();
-          });
-        </script>
+        @stack('styles')
+        
         <style>
             nav{
                 background: white;
@@ -66,8 +61,6 @@
         </style>
 
 </head>
-
-
 <body>      
   <div id="app"  >
       <nav style="@if(request()->get('app')) display: none !important; @endif">
@@ -122,6 +115,13 @@
         </main>
 
   </div>
-        
+  <script>
+            $(document).ready(function(){
+            $('.dropdown-trigger').dropdown();
+            $('.sidenav').sidenav();
+            $('.parallax').parallax();
+          });
+        </script>
+         @stack('scripts')
 </body>
 </html>
